@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+  <h2>Predict Popularity Score</h2>
+
+  <form method="POST" action="/">
+    <!-- 数字类数据输入 -->
+    Price:<br>
+    <input type="number" name="price" step="0.01">
+    <br><br>
+    Promotion:<br>
+    <input type="number" name="promotion" step="0.01">
+    <br><br>
+    Unit Count (Combined):<br>
+    <input type="number" name="Unit_Count_comb" step="0.01">
+    <br><br>
+
+    <!-- 分类型数据输入 -->
+    Brand:<br>
+    <input type="text" name="Brand">
+    <br><br>
+    Manufacturer:<br>
+    <input type="text" name="Manufacturer">
+    <br><br>
+    Flavor:<br>
+    <input type="text" name="Flavor">
+    <br><br>
+    Primary Supplement:<br>
+    <input type="text" name="Primary_Supplement">
+    <br><br>
+    Item Form:<br>
+    <input type="text" name="Item_Form">
+    <br><br>
+    Age Range:<br>
+    <input type="text" name="Age_Range">
+    <br><br>
+    Diet Type:<br>
+    <input type="text" name="Diet_Type">
+    <br><br>
+    Directions:<br>
+    <input type="text" name="Directions">
+    <br><br>
+    Description:<br>
+    <input type="text" name="Description">
+    <br><br>
+
+    <!-- 文本类数据输入 -->
+    Benefit:<br>
+    <input type="text" name="Benefit">
+    <br><br>
+    Ingredient:<br>
+    <input type="text" name="Ingredient">
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred %}
+  <p>The product is {% if pred == 1 %}popular{% else %}not popular{% endif %}</p>
+  {% endif %}
+
+  </body>
+</html>
+
